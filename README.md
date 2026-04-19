@@ -4,8 +4,8 @@
 
 Calculates four key properties from a single CIF file:
 
-| # | Property | Method | Time |
-|---|----------|--------|------|
+| # | Property | Method | 
+|---|----------|--------|
 | 1 | Electronic bandgap | Single-point DFT | 
 | 2 | Li adsorption energy | GEO_OPT (MOF + Li) |
 | 3 | Formation energy | Instant (reuses #1) | 
