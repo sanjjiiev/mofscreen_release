@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "mofscreen"
+version = "1.0.0"
+description = "Automated DFT screening of MOFs for Li-ion anode material properties using CP2K"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+    { name = "MOFScreen Authors" }
+]
+keywords = [
+    "DFT", "MOF", "CP2K", "bandgap", "adsorption",
+    "formation-energy", "anode", "battery", "computational-chemistry"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "numpy>=1.21",
+    "ase>=3.22",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "build", "twine"]
+
+[project.urls]
+Homepage      = "https://github.com/yourusername/mofscreen"
+Documentation = "https://github.com/yourusername/mofscreen#readme"
+Issues        = "https://github.com/yourusername/mofscreen/issues"
+
+[project.scripts]
+mofscreen = "mofscreen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mofscreen*"]
+
+[tool.setuptools.package-data]
+mofscreen = ["*.py"]
